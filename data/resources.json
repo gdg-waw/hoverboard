@@ -220,7 +220,7 @@
     "blocks": [
       {
         "title": "Organizer",
-        "description": "<a href='https://gdgwarszawa.pl/' target='_blank'>GDG Warsaw</a> with support of 10 GDGs from all around Poland is proud organizer of DevFest Warsaw",
+        "description": "<a href='https://gdgwarszawa.pl/' target='_blank'>GDG Warsaw</a> is proud organizer of DevFest Warsaw",
         "callToAction": {
           "label": "Open team page",
           "link": "/team"
