@@ -54,6 +54,26 @@
       ]
     },
     {
+      "title": "Social Media",
+      "links": [
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/dev_fest",
+          "newTab": true
+        },
+        {
+          "name": "Meetup",
+          "url": "https://www.meetup.com/GDG-Warszawa/events/254127572/",
+          "newTab": true
+        },
+        {
+          "name": "Subscribe",
+          "url": "https://landing.mailerlite.com/webforms/landing/g0p3s3",
+          "newTab": true
+        }
+      ]
+    },
+    {
       "title": "Event Resources",
       "links": [
         {
