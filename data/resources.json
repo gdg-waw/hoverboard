@@ -116,11 +116,11 @@
       },
       "sessions": {
         "label": "Sessions",
-        "number": "30"
+        "number": "10"
       },
       "tracks": {
-        "label": "Tracks",
-        "number": "3"
+        "label": "Workshops",
+        "number": "6"
       }
     }
   },
