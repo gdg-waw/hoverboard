@@ -108,7 +108,7 @@
     "statisticsBlock": {
       "attendees": {
         "label": "Attendees",
-        "number": "200"
+        "number": "300"
       },
       "days": {
         "label": "Days",
@@ -127,7 +127,7 @@
   "ticketsBlock": {
     "title": "Tickets",
     "ticketsDetails": "Tickets grant access to all conference sections, coffee breaks, lunch and party. Accommodation is NOT included in the ticket price.",
-    "soldOut": "You missed it!",
+    "soldOut": "Ticket sales starts soon",
     "notAvailableYet": "Not available yet",
     "save": "20% discount"
   },

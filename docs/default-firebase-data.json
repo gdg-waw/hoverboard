@@ -1477,13 +1477,13 @@
     "title" : "Core Team"
   } ],
   "tickets" : [ {
-    "available" : true,
+    "available" : false,
     "currency" : "$",
     "ends" : "Oct 13",
     "info" : "Requires valid student/lecturer ID",
     "name" : "EDU",
     "price" : 80,
-    "soldOut" : false,
+    "soldOut" : true,
     "starts" : "Feb 7",
     "url" : "https://2event.com/events/1027108"
   }, {
@@ -1499,7 +1499,7 @@
     "starts" : "Feb 7",
     "url" : "https://2event.com/events/1027108"
   }, {
-    "available" : true,
+    "available" : false,
     "currency" : "$",
     "ends" : "Jun 30",
     "inDemand" : true,
@@ -1507,7 +1507,7 @@
     "name" : "Early Bird",
     "price" : 120,
     "regular" : true,
-    "soldOut" : false,
+    "soldOut" : true,
     "starts" : "Feb 7",
     "url" : "https://2event.com/events/1027108"
   }, {
@@ -1520,16 +1520,16 @@
     "price" : 160,
     "primary" : true,
     "regular" : true,
-    "soldOut" : false,
+    "soldOut" : true,
     "starts" : "Jul 1",
     "url" : "https://2event.com/events/1027108"
   }, {
-    "available" : true,
+    "available" : false,
     "currency" : "$",
     "info" : "Money worth nothing when you love it",
     "name" : "I Love DFUA",
     "price" : 280,
-    "soldOut" : false,
+    "soldOut" : true,
     "url" : "https://2event.com/events/1027108"
   } ],
   "triggers" : {
