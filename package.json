@@ -20,6 +20,7 @@
     "test": "echo \"No tests\""
   },
   "dependencies": {
+    "@google-cloud/debug-agent": "^3.0.0",
     "autotrack": "^2.4.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
@@ -39,7 +40,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-polymer": "^0.1.0",
-    "firebase-admin": "6.0.0",
+    "firebase-admin": "^6.0.0",
     "firebase-tools": "4.2.1",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.0",

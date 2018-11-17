@@ -10,6 +10,9 @@ import { scheduleWrite, sessionsWrite, speakersWrite } from './generate-sessions
 
 admin.initializeApp();
 
+const debug = require('@google-cloud/debug-agent').start({ allowExpressions: true });
+
+
 export {
   saveUserData,
   sendGeneralNotification,
