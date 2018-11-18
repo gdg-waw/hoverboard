@@ -12,6 +12,13 @@ admin.initializeApp();
 
 const debug = require('@google-cloud/debug-agent').start({ allowExpressions: true });
 
+let debugInitialized;
+let functionCompleted;
+let responseJSON;
+
+debugInitialized = false;
+functionCompleted = false;
+
 
 export {
   saveUserData,

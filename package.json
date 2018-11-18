@@ -23,6 +23,7 @@
     "@google-cloud/debug-agent": "^3.0.0",
     "autotrack": "^2.4.1",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {

@@ -20,10 +20,15 @@ export const speakersWrite = functions.firestore.document('speakers/{speakerId}'
 
 async function generateAndSaveData(changedSpeaker) {
     const sessionsPromise = firestore().collection('sessions').get();
-    const schedulePromise = firestore().collection('schedule').orderBy('date', 'desc').get();
+    const schedulePromise = firestore().collection('schedule').get();
     const speakersPromise = firestore().collection('speakers').get();
 
     const [sessionsSnapshot, scheduleSnapshot, speakersSnapshot] = await Promise.all([sessionsPromise, schedulePromise, speakersPromise]);
+
+    console.log("schedule snapshot:"+ JSON.stringify(scheduleSnapshot, null, 2));
+    console.log("speakers snapshot:"+ JSON.stringify(speakersSnapshot, null, 2));
+
+
 
     const sessions = {};
     const schedule = {};
@@ -35,6 +40,8 @@ async function generateAndSaveData(changedSpeaker) {
 
     scheduleSnapshot.forEach((doc) => {
         schedule[doc.id] = doc.data();
+        console.log("schedule snapshot doc.id:"+ doc.id);
+
     });
 
     speakersSnapshot.forEach((doc) => {
@@ -43,16 +50,26 @@ async function generateAndSaveData(changedSpeaker) {
 
     let generatedData = {}
     const scheduleConfig = functions.config().schedule;
+    console.log("schedule config:"+ scheduleConfig.enabled);
+
     const scheduleEnabled = scheduleConfig && scheduleConfig.enabled === 'true';
+    console.log("schedule enabled:"+ scheduleEnabled);
+
 
     if (!Object.keys(sessions).length) {
         generatedData = { ...speakers };
+        console.log("speakers");
+
     }
     else if (!scheduleEnabled || !Object.keys(schedule).length) {
         generatedData = mapSessionsSpeakers(sessions, speakers);
+        console.log("sessions and speakers");
+
     }
     else {
         generatedData = mapSessionsSpeakersSchedule(sessions, speakers, schedule);
+        console.log("sessions and speakers and schedule");
+
     }
 
     // If changed speaker does not have assigned session(s) yet
@@ -63,6 +80,8 @@ async function generateAndSaveData(changedSpeaker) {
     saveGeneratedData(generatedData.sessions, 'generatedSessions');
     saveGeneratedData(generatedData.speakers, 'generatedSpeakers');
     saveGeneratedData(generatedData.schedule, 'generatedSchedule');
+    console.log(generatedData.schedule);
+
 }
 
 function saveGeneratedData(data, collectionName) {
