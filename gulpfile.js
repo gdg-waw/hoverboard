@@ -27,7 +27,6 @@ const config = {
   build: {
     rootDirectory: 'build',
   },
-  swPrecacheConfigPath: './sw-precache-config.js',
   templateData: [
     `${getConfigPath()}`,
     'data/settings',
@@ -36,7 +35,6 @@ const config = {
   tempDirectory: '.temp',
 };
 
-const swPrecacheConfig = require(config.swPrecacheConfigPath);
 const polymerJson = require(config.polymerJsonPath);
 const buildPolymerJson = {
   entrypoint: prependPath(config.tempDirectory, polymerJson.entrypoint),
@@ -113,7 +111,6 @@ function build() {
           )
             .replace('\\', '/'),
           bundled: config.build.bundled,
-          swPrecacheConfig,
         });
       })
       .then(() => {
