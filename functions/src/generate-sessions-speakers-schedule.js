@@ -74,6 +74,7 @@ async function generateAndSaveData(changedSpeaker) {
 
     // If changed speaker does not have assigned session(s) yet
     if (changedSpeaker && !generatedData.speakers[changedSpeaker.id]) {
+        console.log("changed speaker id:"+ JSON.stringify(changedSpeaker.id, null, 2));
         generatedData.speakers[changedSpeaker.id] = changedSpeaker;
     }
 
@@ -86,6 +87,11 @@ async function generateAndSaveData(changedSpeaker) {
 
 function saveGeneratedData(data, collectionName) {
     if (!data || !Object.keys(data).length) return;
+
+    console.log("data:"+ JSON.stringify(data, null, 2));
+    console.log("collectionName:"+ collectionName);
+
+
 
     for (let index = 0; index < Object.keys(data).length; index++) {
         const key = Object.keys(data)[index];
