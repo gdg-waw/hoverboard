@@ -11,11 +11,14 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
         let timeslots = [];
         let extensions = {};
 
+        if(day.timeslots == null || day.timeslots.length <= 0) continue
         const timeslotLen = day.timeslots.length;
+
         for (let timeslotsIndex = 0; timeslotsIndex < timeslotLen; timeslotsIndex++) {
             const timeslot = day.timeslots[timeslotsIndex];
             let innerSessions = [];
 
+            if(timeslot.sessions == null || timeslot.sessions.length <= 0) continue
             const sessionsLen = timeslot.sessions.length;
             for (let sessionIndex = 0; sessionIndex < sessionsLen; sessionIndex++) {
                 let subSessions = [];
